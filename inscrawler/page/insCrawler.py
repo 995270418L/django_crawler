@@ -22,14 +22,13 @@ class Crawler(object):
         self.session = requests.Session()
 
     def scrapeUrl(self, url):
+        print('scrapeUrl')
         resp = self.session.get(url)
-        print("url: " + url)
         share_data = resp.text.split('window._sharedData = ')[1].split(';</script>')[0]
-        print(json.loads(share_data)['entry_data']['PostPage'][0]['graphql']['shortcode_media'])
         try:
             media = json.loads(share_data)['entry_data']['PostPage'][0]['media']
         except (KeyError,TypeError):
-                media = json.loads(share_data)['entry_data']['PostPage'][0]['graphql']['shortcode_media']
+            media = json.loads(share_data)['entry_data']['PostPage'][0]['graphql']['shortcode_media']
         is_video = media['is_video']
         url = {}
         if is_video :

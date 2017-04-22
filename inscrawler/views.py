@@ -6,6 +6,8 @@ from .models import Visitor
 from .page.insCrawler import Crawler
 
 # Create your views here.
+
+#首页
 def index(request):
 
     if request.META.get('HTTP_X_FORWARDED_FOR'):  # 有代理
@@ -54,12 +56,14 @@ def ins(request):
     content = {'subtitle': 'Instagram'}
     content.update({'url_base':request.path})
 
-    # 从url获取语言
+    # 从request获取语言
     if request.GET.get('language'):
         language_now = request.GET['language']
 
     # 获取表单传值url
     url_real = request.POST.get('url')
+
+    #如果地址为空
     if not url_real:
         if language_now=='English':
             error = 'The url is empty,please try again.'
@@ -73,7 +77,7 @@ def ins(request):
     # 分析url
     url = url_real.split('/')
     #instagram crawler
-    if(len(url) > 1 and url[2]=='www.instagram.com'):
+    if(len(url) > 1 and url[2] == 'www.instagram.com'):
         # 帖子地址
         if(len(url) >= 6 and url[3] == 'p'):
             crawler = Crawler()

@@ -1,0 +1,31 @@
+{% extends './base-en.html' %}
+{% block main %}
+    <div class="index-header">
+	    <h1 style="text-align:center;margin-bottom: 5%;margin-top:5%;">Instagram Photo Download</h1>
+    </div>
+	<div class="ads">
+
+	</div>
+	<div class="form text-left" style="margin-top:5%;">
+		<form method="post" action="/instagram" id="url_submit">
+            {% csrf_token %}
+			<input type="text" class="url" name="url" placeholder="Enter the url here">
+			<input type="submit" name="submit" value="Go" class="btn btn-info button">
+		</form>
+	</div>
+    <div class="text" style="margin-top:5%;margin-bottom:5%">
+        <p style="text-align: center;">How to Download Instagram Photo or Video ?</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crawler.site support a simple way to download Instagram pictures to your PC, Mac, Phone.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Downloading Instagram Picture - Simply Enter Instagram Image URL on above ‘Text Box’ and click on Go Button. That’s it Download Link will Display on Next Page.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Just Click on “Download” Link to save the Picture or Just Right-Click the Picture center and click “Save Image as...”</p>
+	</div>
+	<div class="ads"></div>
+    <footer>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li><a href="/file">Terms&amp;Privacy</a></li>
+            <li><a href="Mailto:xypfdwy@163.com">Contact</a></li>
+            <li><span>Copyright &copy;2017 All rights reserved.</span></li>
+        </ol>
+    </footer>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+{% load static %}
+{% block main %}
+    <div style="margin-top:5%"><p style="text-align: center;color:#ae01ff;font-size:2em;">您的支持,会让网站变的更好！</p></div>
+    <div class="zhifubao" ><img src="{% static 'inscrawler/images/zhifubao2.jpg' %}" /><br><p style="text-align:center;font-size:1.7em;margin-top:10px;">支付宝</p></div>
+    <div class="weixin"><img src="{% static 'inscrawler/images/weixin.jpg' %}" /><p style="text-align:center;font-size:1.7em;margin-top:10px;">微信</p></div>
+    <footer>
+        <ol class="breadcrumb">
+            <li><a href="/">首页</a></li>
+            <li><a href="/file">使用条款&amp;免责声明</a></li>
+            <li><a href="Mailto:xypfdwy@163.com">联系我们</a></li>
+            <li><span>Copyright &copy;2017-至今 保留所有权利.</span></li>
+        </ol>
+    </footer>
+{% endblock %}

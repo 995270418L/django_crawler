@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crawler.site | Instagram photo download online | Instagram Video Download | Ins Photo download | Ins video download</title>
+
+    <!-- bootstrap start-->
+	<link rel="stylesheet" href="{% static 'inscrawler/bootstrap.min.css' %}">
+	<script src="{% static 'inscrawler/jquery-3.1.1.min.js' %}"></script>
+	<script src="{% static 'inscrawler/bootstrap.min.js' %}"></script>
+	<!-- bootstrap end -->
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8879167188382058",
+        enable_page_level_ads: true
+      });
+    </script>
+    <!-- self -->
+    <link rel="stylesheet" href="{%  static 'inscrawler/main.css' %}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msvalidate.01" content="06519E34083DE129BF62F0221F5E699D">
+    <meta name="description" content="Instagram Photo Downloader. Simple way to download Instagram pictures to your PC.">
+    <meta name="keywords" content="Download Instagram Photos, download Instagram videos">
+    <link rel="canonical" href="http://crawler.site/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" href="http://www.w3toys.com/instagram/instagram.ico">
+
+    <!-- Facebook Metadata /-->
+    <meta property="og:title" content="Instagram photo download. Instagram video download">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="http://crawler.site">
+    <meta property="og:description" content="Instagram Photo Downloader. Simple way to download Instagram Photos to your PC MAC ,Iphone ">
+
+    <!-- Google+ Metadata /-->
+    <meta itemprop="name" content="Instagram photo download">
+    <meta itemprop="description" content="Instagram Photo Downloader. Instagram Video Downloader. Simple way to download Instagram pictures to your PC.">
+
+    <!-- Twitter Card /-->
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:card" content="video">
+    <meta name="og:title" content="Instagram photo download">
+    <meta name="twitter:url" content="http://crawler.site/">
+
+</head>
+<body>
+        <div id="main" >
+          <ul class="nav nav-pills">
+            <li class="navbar-left brand">
+                <a href="/">Crawler.site</a>
+            </li>
+            <li roll="presentation" class="dropdown navbar-right list">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url }}" role="button" aria-haspopup="true" aria-expanded="false">{{ language_now }}<span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    {% for l in language %}
+                        <li><a class="language" href="{{ url }}?language={{ l }}" >{{ l }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+          </ul>
+            {% block main %}{% endblock %}
+        </div>
+    <script src="{% static 'inscrawler/main.js' %}"></script>
+</body>

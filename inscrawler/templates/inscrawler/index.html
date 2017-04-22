@@ -1,0 +1,32 @@
+{% extends './base.html' %}
+{% block main %}
+	<div class="index-header" style="text-align:center">
+	    <h1 style="text-align:center;margin-bottom: 8px;margin-top:5%;">Instagram 图片/视屏下载</h1>
+        <a class="btn btn-info" href="https://apkpure.com/cn/instagram/com.instagram.android" style="margin-bottom: 10px;">下载Instagram apk</a><br>
+    </div>
+	<div class="ads">
+
+	</div>
+	<div class="form text-left">
+		<form method="post" action="/instagram" id="url_submit">
+            {% csrf_token %}
+			<input type="text" class="url" name="url" placeholder="请在此粘贴正确的地址(https://www.instagram.com/gem0816/)">
+			<input type="submit" name="submit" value="提交" class="btn btn-info button">
+		</form>
+	</div>
+    <div class="text" style="margin-top:5%;margin-bottom:5%">
+        <p style="text-align: center;">怎样下载Instagram上的图片或者视频到本地?</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crawler.site 提供一种非常简单的方法保存Instagram照片到你的个人电脑，手机，平板。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先复制Instagram上你想保存的图片帖子地址/个人地址 到输入框里面，然后点击提交按钮，转到图片详情页面。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击下载,或者右击图片,选择"图片另存为..."就保存成功了。</p>
+	</div>
+	<div class="ads"></div>
+    <footer>
+        <ol class="breadcrumb">
+            <li><a href="/">首页</a></li>
+            <li><a href="/file">使用条款&amp;免责声明</a></li>
+            <li><a href="Mailto:xypfdwy@163.com">联系我们</a></li>
+            <li><span>Copyright &copy;2017 保留所有权利.</span></li>
+        </ol>
+    </footer>
+{% endblock %}

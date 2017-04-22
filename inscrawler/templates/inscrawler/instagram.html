@@ -1,0 +1,95 @@
+{% extends './base.html' %}
+{% block main %}
+    {% if error_message %} <div class="alert alert-warning" role="alert">{{ error_message}} </div>{% endif %}
+    <div class="form text-left">
+		<form method="post" action="/instagram" id="url_submit">
+            {% csrf_token %}
+			<input type="text" class="url" name="url" placeholder="请在此粘贴正确的地址(https://www.instagram.com/gem0816/)">
+			<input type="submit" name="submit" value="提交" class="btn btn-info button">
+		</form>
+	</div>
+    {# 帖子用户#}
+    {% if url %}
+        <div class="userinfo container"> {# 用户个人信息 #}
+            <div class="userinfo-left">
+                <img src="{{ url.userinfo.profile_pic_url }}" class="img">
+            </div>
+            <div class="userinfo-right">
+                <p>{{ url.userinfo.username }}</p>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <p>{{ url.userinfo.full_name }}</p>
+            </div>
+            <div class="userinfo-ads">
+
+            </div>
+        </div>
+        <div class="ins-content">
+        {% if url.is_video %}
+            <video src="{{ url.url }}" class="video" controls></video>
+        {% else %}
+            <img src="{{ url.url }}" class="img"/>
+        {% endif %}
+        </div>
+        <div class="ad-instagram">
+            <div class="ad-left"><a href="{{ url.url }}" class="btn btn-info big-button" download="{{ url.url }}">下载</a></div>
+        </div>
+        <blockquote>
+            <ul>
+                <li>图片或者视频加载需要时间，请耐心等候或者稍后刷新页面</li>
+                <li>当前页面内容版权归 <a href="https://www.instagram.com/{{ url.userinfo.username }}" > @{{ url.userinfo.username }}</a>所有，本站只提供服务。</li>
+            </ul>
+        </blockquote>
+    {% endif %}
+
+    {# 个人用户 #}
+    {% if urls %}
+        <div class="userinfo"> {# 用户个人信息 #}
+            <div class="userinfo-left">
+                <img src="{{ userinfo.user.profile_picture }}" class="img">
+            </div>
+            <div class="userinfo-right">
+                <p>{{ userinfo.user.username }}</p>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <p>{{ userinfo.user.full_name }}</p>
+            </div>
+            <div class="userinfo-ads">
+
+            </div>
+        </div>
+        <div class="ins-content">
+        {% for url in urls %}
+            {% if '.jpg' in url %}
+                <img src="{{ url }}" class="img_person img"/>
+            {% else %}
+                <video src="{{ url }}" class="video" controls></video>
+            {% endif %}
+            <div class="download"><a href="{{ url }}" class="btn btn-info big-button" download>下载</a></div>
+        {% endfor %}
+        {% if max_id %}
+            <div class="ins-nextpage" style="text-align:center">
+                <a href="/instagram/{{ max_id }}/{{ username }}/" class="btn btn-info">下一页</a>
+            </div>
+        {% endif %}
+        </div>
+        <blockquote>
+            <ul>
+                <li class="list-unstyled">当无法下载的时候，请使用Chrome浏览器打开本网站或者360浏览器</li>
+                <li class="list-unstyled">图片或者视频加载需要时间，请耐心等候或者稍后刷新页面</li>
+                <li class="list-unstyled">当前页面内容版权归 <a href="https://www.instagram.com/{{ userinfo.username }}" > @{{ userinfo.user.username }}</a>所有，本站只提供服务。</li>
+            </ul>
+        </blockquote>
+    {% endif %}
+    <div class="support-me">
+        <p style='font-size:1.7em'>「大爷，赏个铜板呗」</p>
+        <a class="btn btn-danger support " href="/donate">打赏</a>
+    </div>
+    <div class="ads"> </div>
+    <footer>
+        <ol class="breadcrumb">
+            <li><a href="/">首页</a></li>
+            <li><a href="/file">使用条款&amp;免责声明</a></li>
+            <li><a href="Mailto:xypfdwy@163.com">联系我们</a></li>
+            <li><span>Copyright &copy;2017-至今 保留所有权利.</span></li>
+        </ol>
+    </footer>
+{% endblock %}

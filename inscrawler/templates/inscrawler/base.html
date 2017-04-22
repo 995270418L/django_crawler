@@ -51,7 +51,7 @@
 </head>
 <body>
         <div id="main">
-          <ul class="nav nav-pills">
+          <ul class="nav nav-pills nav">
             <li class="navbar-left brand">
                 <a href="/">Crawler.site</a>
             </li>
@@ -64,7 +64,9 @@
                 </ul>
             </li>
           </ul>
-            {% block main %}{% endblock %}
+            <div class="index-content">
+                {% block main %}{% endblock %}
+            </div>
         </div>
 
 {#        <!--两侧广告看情况添加-->#}

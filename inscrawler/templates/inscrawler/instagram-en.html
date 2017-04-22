@@ -1,4 +1,4 @@
-{% extends './base.html' %}
+{% extends './base-en.html' %}
 {% block main %}
     {% if error_message %} <div class="alert alert-warning" role="alert">{{ error_message}} </div>{% endif %}
     <div class="form text-left">
@@ -78,7 +78,7 @@
         <blockquote>
             <ul>
                 <li>Pictures or video loading takes time, please be patient or refresh the page later</li>
-                <li>The current page content is copyrighted <a href="https://www.instagram.com/{{ userinfo.username }}" > @{{ userinfo.user.username }}</a>. We only provides services.</li>
+                <li>The current page content is copyrighted <a href="https://www.instagram.com/{{ userinfo.username }}" > @{{ userinfo.user.username }}</a>. We only provides the crawler services.</li>
             </ul>
         </blockquote>
         <div class="support-me">

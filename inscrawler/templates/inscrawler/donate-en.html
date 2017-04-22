@@ -1,8 +1,23 @@
-{% extends './base.html' %}
+{% extends './base-en.html' %}
 {% load static %}
 {% block main %}
-    <div style="margin-top:5%"><p style="text-align: center;color:#ae01ff;font-size:2em;">Thank you for your support.</p></div>
-    <div style="margin:10%;text-align: center;"><a href="https://www.paypal.me/floder" class="btn btn-info">Donate</a></div>
+    <div style="margin-top:5%;margin-bottom: 3%;"><p style="text-align: center;color:#ae01ff;font-size:2em;">Thank you for your support.</p></div>
+    <div class="alert alert-warning donate-en-alert hide" role="alert">xxx</div>
+{#    <div style="margin:10%;margin-bottom: 10%;" class="donate-en ">#}
+{#        <div class="form-group">#}
+{#            <input type="text" placeholder="Number you want to donate for us" class="form-control col-lg-5"/>#}
+{#        </div>#}
+{#        <a href="https://www.paypal.me/floder/5" class="btn btn-info col-sm-2">Donate</a>#}
+{#    </div>#}
+    <div style="margin:10%;margin-top: 5%;text-align: center" class="donate-en">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Money:</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="The number of money">
+            </div>
+            <a href="https://www.paypal.me/floder/1" class="btn btn-default">Donate.</a>
+        </form>
+    </div>
     <footer>
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>

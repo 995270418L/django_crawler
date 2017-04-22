@@ -130,6 +130,7 @@ form {
 	heigth:auto;
 }
 .ins-content .img{
+	border-radius: 5px;
 	max-width: 100%;
 	max-height: 100%;
 	vertical-align: middle;

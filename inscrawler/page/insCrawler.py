@@ -29,7 +29,7 @@ class Crawler(object):
         try:
             media = json.loads(share_data)['entry_data']['PostPage'][0]['media']
         except (KeyError,TypeError):
-            media = json.loads(share_data)['entry_data']['PostPage'][0]['graphql']['shortcode_media']
+                media = json.loads(share_data)['entry_data']['PostPage'][0]['graphql']['shortcode_media']
         is_video = media['is_video']
         url = {}
         if is_video :
@@ -41,11 +41,13 @@ class Crawler(object):
         return url
 
 
+
     def scrapePerson(self,username,max_id=None):
         '''crawls through cookies and get user's media url'''
         # executor =concurrent.futures.ThreadPoolExecutor(max_workers=10)    # 多线程
         print('scrape start ...')
         # 开始爬取用户所有图片
+        url=[]
         for item in self.media_gen(username,max_id):
             url.append(item['url'])
         return url
@@ -60,7 +62,7 @@ class Crawler(object):
             try:
                 user['user'] = json.loads(resp.text)['items'][0]['user']  # 用户信息
             except (TypeError,KeyError,IndexError):
-                uers['error'] = 'error'
+                user['error'] = 'error'
                 user['user'] = '该用户为私密用户，如需要个人图片/视频，可联系站长获取。'
                 user['user_en'] = 'The user is a private user, such as the need for personal pictures / video, can contact the webmaster to obtain.'
         elif resp.status_code == 404:

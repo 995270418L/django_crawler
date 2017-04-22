@@ -25,7 +25,7 @@ SECRET_KEY = '*e3g&h0p!9g^f&&7()j!y=khycgxxee5vw%%wqkb$vriic3ozx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['crawler.site','www.crawler.site','127.0.0.1']
 
 
 # Application definition
@@ -123,7 +123,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE_ROOT = os.path.abspath(os.path.join(SITE_ROOT,'../'))
-STATIC_ROOT = os.path.join(SITE_ROOT,'collectedstatic')
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'

@@ -5,20 +5,12 @@
 	<title>Crawler.site | Instagram photo download online | Instagram Video Download | Ins Photo download | Ins video download</title>
 
     <!-- bootstrap start-->
-	<link rel="stylesheet" href="{% static 'inscrawler/bootstrap.min.css' %}">
-	<script src="{% static 'inscrawler/jquery-3.1.1.min.js' %}"></script>
-	<script src="{% static 'inscrawler/bootstrap.min.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'inscrawler/css/bootstrap.min.css' %}">
+	<script src="{% static 'inscrawler/js/jquery-3.1.1.min.js' %}"></script>
+	<script src="{% static 'inscrawler/js/bootstrap.min.js' %}"></script>
 	<!-- bootstrap end -->
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-8879167188382058",
-        enable_page_level_ads: true
-      });
-    </script>
     <!-- self -->
-    <link rel="stylesheet" href="{%  static 'inscrawler/main.css' %}">
+    <link rel="stylesheet" href="{%  static 'inscrawler/css/main.css' %}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msvalidate.01" content="06519E34083DE129BF62F0221F5E699D">
@@ -47,20 +39,29 @@
 </head>
 <body>
         <div id="main" >
-          <ul class="nav nav-pills">
-            <li class="navbar-left brand">
-                <a href="/">Crawler.site</a>
-            </li>
-            <li roll="presentation" class="dropdown navbar-right list">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url }}" role="button" aria-haspopup="true" aria-expanded="false">{{ language_now }}<span class="caret"></span></a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    {% for l in language %}
-                        <li><a class="language" href="{{ url }}?language={{ l }}" >{{ l }}</a></li>
-                    {% endfor %}
+          <ul class="navbar nav-pills nav">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a href="/" class="navbar-brand navbar-left">Crawler.site</a>
+                </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-right navbar-nav">
+{#                    <li><a href="/">FB VideoDownload</a></li>#}
+                    <li roll="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url }}" role="button" aria-haspopup="true" aria-expanded="false">{{ language_now }}<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            {% for l in language %}
+                                <li><a class="language" href="{{ url }}?language={{ l }}" >{{ l }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
                 </ul>
-            </li>
+              </div>
+              </div>
           </ul>
+            <div class="index-content">
             {% block main %}{% endblock %}
+            </div>
         </div>
-    <script src="{% static 'inscrawler/main.js' %}"></script>
+    <script src="{% static 'inscrawler/js/main.js' %}"></script>
 </body>

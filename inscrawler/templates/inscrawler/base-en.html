@@ -48,10 +48,10 @@
                 <ul class="nav navbar-right navbar-nav">
 {#                    <li><a href="/">FB VideoDownload</a></li>#}
                     <li roll="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url }}" role="button" aria-haspopup="true" aria-expanded="false">{{ language_now }}<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="{{ url_base }}?language={{ language_now }}" role="button" aria-haspopup="true" aria-expanded="false">{{ language_now }}<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                             {% for l in language %}
-                                <li><a class="language" href="{{ url }}?language={{ l }}" >{{ l }}</a></li>
+                                <li><a class="language" href="{{ url_base }}?language={{ l }}" >{{ l }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>

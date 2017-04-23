@@ -39,6 +39,10 @@
                 <li>当前页面内容版权归 <a href="https://www.instagram.com/{{ url.userinfo.username }}" > @{{ url.userinfo.username }}</a>所有，本站只提供服务。</li>
             </ul>
         </blockquote>
+        <div class="support-me">
+        <p style='font-size:1.7em'>「赠人玫瑰，手有余香」</p>
+        <a class="btn btn-danger support " href="/donate">打赏</a>
+    </div>
     {% endif %}
 
     {# 个人用户 #}
@@ -78,11 +82,11 @@
                 <li>当前页面内容版权归 <a href="https://www.instagram.com/{{ userinfo.username }}" > @{{ userinfo.user.username }}</a>所有，本站只提供服务。</li>
             </ul>
         </blockquote>
-    {% endif %}
-    <div class="support-me">
+        <div class="support-me">
         <p style='font-size:1.7em'>「赠人玫瑰，手有余香」</p>
         <a class="btn btn-danger support " href="/donate">打赏</a>
     </div>
+    {% endif %}
     <div class="ads"> </div>
     <footer>
         <ol class="breadcrumb">

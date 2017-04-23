@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
 from .page import global_variables
 from .models import Visitor
 from .page.insCrawler import Crawler
@@ -50,15 +48,20 @@ def index(request):
 # 爬取主函数
 def ins(request):
 
-    # 检查是否盗链以及获取对应的language
-    language_now = check_lan(request)
-    if not language_now:
-        return HttpResponseRedirect(reverse('index'))
+    # 检查是否盗链以及获取对应的language 不用检查是否盗链
+    # 从session获取语言
+    # language_now = check_lan(request)
+    # if not language_now:
+    #     return HttpResponseRedirect(reverse('index'))
     content = {'subtitle': 'Instagram'}
     content.update({'url_base':request.path})
 
+    #先从session中获取，再从request中获取
+    language_now = session_lan(request)
+
     # 从request获取语言
     if request.GET.get('language'):
+        print('url get language in ins')
         language_now = request.GET['language']
 
     # 获取表单传值url
@@ -66,7 +69,7 @@ def ins(request):
 
     #如果地址为空
     if not url_real:
-        if language_now=='English':
+        if language_now == 'English':
             error = 'The url is empty,please try again.'
             content.update({'error_message': error})
             return render(request,'inscrawler/instagram-en.html',content)
@@ -130,11 +133,12 @@ def ins(request):
 
 # 下一页
 def ins2(request,max_id,username):
-    language_now = check_lan(request)
-    if not language_now:
-        return HttpResponseRedirect(reverse('index'))
+    # language_now = check_lan(request)
+    # if not language_now:
+    #     return HttpResponseRedirect(reverse('index'))
 
-    # 从url获取语言
+    language_now = session_lan(request)
+    # 从request中获取语言
     if request.GET.get('language'):
         language_now = request.GET['language']
 
@@ -170,14 +174,12 @@ def ins2(request,max_id,username):
 
 def file(request):
     content = {'url_base':request.path}
-    language_now = check_lan(request)
+
+    language_now = session_lan(request)
 
     if request.GET.get('language'):
         language_now = request.GET['language']
-        change_global_language(language_now)
-    print(language_now)
-    if not language_now:
-        return HttpResponseRedirect(reverse('index'))
+
     if language_now == 'English':
         return render(request,'inscrawler/file-en.html',content)
     return render(request,'inscrawler/file.html',content)
@@ -185,10 +187,11 @@ def file(request):
 
 def donate(request):
     content = {'url_base':request.path}
-    language_now = check_lan(request)
-    if not language_now:
-        return HttpResponseRedirect(reverse('index'))
-    if language_now=='English':
+    language_now = session_lan(request)
+    if request.GET.get('language'):
+        language_now = request.GET['language']
+
+    if language_now == 'English':
         return render(request,'inscrawler/donate-en.html',content)
     return render(request,'inscrawler/donate.html',content)
 
@@ -207,11 +210,11 @@ def change_global_language(language_now):
     #     global_variables.language.remove(language_now)
 
 
-def check_lan(request):
+def session_lan(request):
     language_now = request.session.get('language')
     if not language_now:
         change_global_language('English')
-        return False
+        return 'English'
     else:
         change_global_language(language_now)
         return language_now

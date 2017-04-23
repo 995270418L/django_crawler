@@ -71,7 +71,7 @@ footer{
 	width:100%;
 	height:auto;
 	text-align: left;
-	font-size:20px;
+	font-size:16px;
 }
 
 input[class=url]{
@@ -261,11 +261,11 @@ blockquote{
 	background-color:#ffffff;
 }
 .breadcrumb li a{
-	font-size:1.5em;
+	font-size:15px;
 
 }
 .breadcrumb li span{
-	font-size:1.5em;
+	font-size:15px;
 
 }
 .zhifubao img{

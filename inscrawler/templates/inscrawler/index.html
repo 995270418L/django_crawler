@@ -1,25 +1,42 @@
 {% extends './base.html' %}
 {% block main %}
 	<div class="index-header" style="text-align:center">
-	    <h1 style="text-align:center;margin-bottom: 8px;margin-top:5%;">Instagram 图片/视屏下载</h1>
-        <a class="btn btn-info" href="https://apkpure.com/cn/instagram/com.instagram.android" style="margin-bottom: 10px;">下载Instagram apk</a><br>
+	    <h1 style="text-align:center;margin-top:2%;">Instagram 图片/视屏下载</h1>
     </div>
 	<div class="ads">
 
 	</div>
-	<div class="form text-left">
-		<form method="post" action="/instagram" id="url_submit">
+	<div class="col-lg-12">
+		<form method="post" action="/instagram" class="input-group" id="url_submit">
             {% csrf_token %}
-			<input type="text" class="url" name="url" placeholder="请在此粘贴正确的地址(https://www.instagram.com/gem0816/)">
-			<input type="submit" name="submit" value="提交" class="btn btn-info button">
+			<input type="text" class="form-control" name="url" placeholder="请在此粘贴正确的地址(https://www.instagram.com/gem0816/)">
+			<span class="input-group-btn">
+                <button class="btn btn-info" type="button">确定</button>
+            </span>
 		</form>
 	</div>
-    <div class="text" style="margin-top:5%;margin-bottom:5%">
-        <p style="text-align: center;">怎样下载Instagram上的图片或者视频到本地?</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crawler.site 提供一种非常简单的方法保存Instagram照片到你的个人电脑，手机，平板。</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先复制Instagram上你想保存的图片帖子地址/个人地址 到输入框里面，然后点击提交按钮，转到图片详情页面。</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击下载,或者右击图片,选择"图片另存为..."就保存成功了。</p>
-	</div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>Instagram 推荐关注</h2>
+            <table class="table table-striped table-bordered">
+                <tr><a href="https://www.zhihu.com/question/20437307">Instagram 上面有哪些值得关注的用户</a></tr><br>
+                <tr><a href="https://www.zhihu.com/question/19929131">Instagram 上有哪些值得关注的摄影师</a></tr><br>
+                <tr><a href="https://qdan.me/list/VSSgX-9TTxBLTIFe">24个相当有趣的 Instagram 帐号</a></tr><br>
+                <tr><a href="http://lohas.onlylady.com/2016/0808/3827917.shtml">Ins上那些周游世界的名宠网红</a></tr>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <h2>Instagram 存图/视频</h2>
+            <p>复制Instagram上你想保存资源的地址到输入框里面,然后点击确定按钮,转到详情页面。</p>
+            <p>点击下载,或者右击图片,选择"图片另存为..."</p>
+        </div>
+        <div class="col-sm-4">
+            <h2>使用注意:</h2>
+            <p>国内用户使用请先确保能正常访问<a href="https://www.instagram.com">Instagram</a></p>
+            <p>若不能访问，电脑用户点<a href="https://laod.cn/hosts/2017-google-hosts.html">这里</a>，手机用户点<a href="https://www.yizhihongxing.com/">这里</a></p>
+            <p>本站不会托管任何Instagram上的照片，所有权利属于各自拥有者。</p>
+        </div>
+    </div>
 	<div class="ads"></div>
     <footer>
         <ol class="breadcrumb">
@@ -29,4 +46,11 @@
             <li><span>Copyright &copy;2017 保留所有权利.</span></li>
         </ol>
     </footer>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8879167188382058",
+        enable_page_level_ads: true
+      });
+    </script>
 {% endblock %}

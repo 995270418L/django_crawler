@@ -90,10 +90,23 @@ input[type="submit"]{
 	height: auto;
 	margin-bottom: 10px;
 }
-
-form {
-	margin-top:10px;
-	margin-bottom: 30px;
+#url_submit{
+	margin-top:5%;
+	margin-bottom:5%;
+}
+.row h2{
+	font-family:"STHeiti Light ";
+	font-weight:Normal;
+}
+.row p{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#url_submit input{
+	height: 38px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
 }
 
 .message{

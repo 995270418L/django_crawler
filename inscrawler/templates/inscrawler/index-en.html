@@ -6,11 +6,13 @@
 	<div class="ads">
 
 	</div>
-	<div class="form text-left" style="margin-top:5%;">
-		<form method="post" action="/instagram" id="url_submit">
+	<div class="col-lg-12">
+		<form method="post" action="/instagram" class="input-group" id="url_submit">
             {% csrf_token %}
-			<input type="text" class="url" name="url" placeholder="Enter the url here">
-			<input type="submit" name="submit" value="Go" class="btn btn-info button">
+			<input type="text" class="form-control" name="url" placeholder="请在此粘贴正确的地址(https://www.instagram.com/gem0816/)">
+			<span class="input-group-btn">
+                <button class="btn btn-info" type="button">Go</button>
+            </span>
 		</form>
 	</div>
     <div class="text" style="margin-top:5%;margin-bottom:5%">
@@ -18,9 +20,9 @@
         <p>crawler.site support a simple way to download Instagram pictures to your PC, Mac, Phone.</p>
         <p>For Downloading Instagram Picture - Simply Enter Instagram Image URL on above ‘Text Box’ and click on Go Button. That’s it Download Link will Display on Next Page.</p>
         <p>Just Click on “Download” Link to save the Picture or Just Right-Click the Picture center and click “Save Image as...”</p>
-        <h1>FEATURED</h1>
+        <h1>FEATURES</h1>
         <p>Free of charge &amp; photo/video per person &amp; all photos and videos per person</p>
-        <h1>Note</h1>
+        <h1>NOTICE</h1>
         <p>Not affiliated with Instagram & we don't host any of the Instagram Photos on this website, all rights belong to their respective owners.</p>
 	</div>
 	<div class="ads"></div>

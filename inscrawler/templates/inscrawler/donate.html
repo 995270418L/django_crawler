@@ -2,8 +2,10 @@
 {% load static %}
 {% block main %}
     <div style="margin-top:5%"><p style="text-align: center;color:#ae01ff;font-size:2em;">您的支持,会让网站变的更好！</p></div>
-    <div class="zhifubao" ><img src="{% static 'inscrawler/images/zhifubao2.jpg' %}" /><br><p style="text-align:center;font-size:1.7em;margin-top:10px;">支付宝</p></div>
-    <div class="weixin"><img src="{% static 'inscrawler/images/weixin.jpg' %}" /><p style="text-align:center;font-size:1.7em;margin-top:10px;">微信</p></div>
+    <div class="row">
+    <div class="col-lg-5 zhifubao" ><img src="{% static 'inscrawler/images/zhifubao2.jpg' %}" /><br><p style="text-align:center;font-size:1.7em;margin-top:10px;">支付宝</p></div>
+    <div class="col-lg-5 weixin "><img src="{% static 'inscrawler/images/weixin.jpg' %}" /><p style="text-align:center;font-size:1.7em;margin-top:10px;">微信</p></div>
+    </div>
     <footer>
         <ol class="breadcrumb">
             <li><a href="/">首页</a></li>

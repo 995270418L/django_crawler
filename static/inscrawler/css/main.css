@@ -66,6 +66,10 @@ footer{
 .btn{
 	padding:8px 12px;
 }
+.index-row{
+	border: 1px solid #ddd;
+	height:198px;
+}
  /* index-en.html */
 .text{
 	width:100%;
@@ -241,21 +245,17 @@ blockquote{
 
 /*donate template*/
 .zhifubao{
+	border: 1px solid #ddd;
 	margin-top:10%;
-	float:left;
-	max-width:40%;
-	margin-left:5%;
-	margin-right:5%;
+	margin-left:10px;
 	margin-bottom:10%;
 }
 
 .weixin{
+	border: 1px solid #ddd;
 	margin-top:10%;
-	float:left;
-	max-width:40%;
+	margin-left:10px;
 	margin-bottom:10%;
-	margin-left:5%;
-	margin-right:5%;
 }
 .breadcrumb{
 	background-color:#ffffff;

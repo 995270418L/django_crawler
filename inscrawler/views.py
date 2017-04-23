@@ -17,9 +17,7 @@ def index(request):
 
     # 获取浏览器本地语言
     print('request.META[]: ' + str(request.META['HTTP_ACCEPT_LANGUAGE']))
-    language = ''
-    #language = request.META['HTTP_ACCEPT_LANGUAGE'].split(';')[0].split(',')[1]
-    print('OK')
+    language = request.META['HTTP_ACCEPT_LANGUAGE'].split(';')[0].split(',')[0]
     if language:
         if language in global_variables.chinese:
             global_language = '简体中文'

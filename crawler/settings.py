@@ -25,7 +25,7 @@ SECRET_KEY = '*e3g&h0p!9g^f&&7()j!y=khycgxxee5vw%%wqkb$vriic3ozx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['crawler.site','www.crawler.site','127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition

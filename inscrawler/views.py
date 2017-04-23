@@ -16,7 +16,10 @@ def index(request):
         ip = request.META['REMOTE_ADDR']          # 无代理
 
     # 获取浏览器本地语言
-    language = request.META['HTTP_ACCEPT_LANGUAGE'].split(';')[0].split(',')[1]
+    print('request.META[]: ' + str(request.META['HTTP_ACCEPT_LANGUAGE']))
+    language = ''
+    #language = request.META['HTTP_ACCEPT_LANGUAGE'].split(';')[0].split(',')[1]
+    print('OK')
     if language:
         if language in global_variables.chinese:
             global_language = '简体中文'

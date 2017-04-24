@@ -47,12 +47,6 @@ def index(request):
 
 # 爬取主函数
 def ins(request):
-
-    # 检查是否盗链以及获取对应的language 不用检查是否盗链
-    # 从session获取语言
-    # language_now = check_lan(request)
-    # if not language_now:
-    #     return HttpResponseRedirect(reverse('index'))
     content = {'subtitle': 'Instagram'}
     content.update({'url_base':request.path})
 
@@ -87,13 +81,12 @@ def ins(request):
             crawler = Crawler()
             url_crawler = crawler.scrapeUrl(url_real)
             content.update({'url':url_crawler})
-        elif(len(url)==5):
+        elif(len(url) == 5 ):
             username = url[3]
             print('username: ' + username)
             crawler = Crawler()
             #获取userInfo
             userinfo = crawler.fetch_user(username)
-            print('userinfo: ' + str(userinfo))
             if userinfo['user'] == 'error':
                 if language_now== 'English':
                     content.update({'error_message':userinfo['user_en']})
@@ -114,6 +107,13 @@ def ins(request):
                 content.update({'max_id': message['max_id']})
                 content['username'] = username
             content.update({'urls': message['urls']})
+        else:
+            if language_now == 'English':
+                error = 'Address input error, please retry it.'
+                content.update({'error_message': error})
+            else:
+                error = '地址输入错误，请重新输入'
+                content.update({'error_message': error})
 
         # 返回正常信息
         if language_now =='English':

@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d7516c37-339c-4bdd-af40-3bacc17d6416" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css" afterPath="$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html" afterPath="$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html" afterPath="$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html" afterPath="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscrawler/views.py" afterPath="$PROJECT_DIR$/inscrawler/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html" afterPath="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html" />
     </list>
     <ignored path="crawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,17 +34,17 @@
       <file leaf-file-name="index-en.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="101" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="101" />
+            <state relative-caret-position="236">
+              <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscrawler/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="1716">
               <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -53,7 +56,7 @@
       <file leaf-file-name="insCrawler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscrawler/page/insCrawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="506">
               <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding />
             </state>
@@ -70,12 +73,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instagram-en.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="instagram-en.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-418">
-              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-              <folding />
+            <state relative-caret-position="3916">
+              <caret line="178" column="53" selection-start-line="178" selection-start-column="53" selection-end-line="178" selection-end-column="53" />
+              <folding>
+                <element signature="e#7194#7219#0#HTML" expanded="true" />
+                <element signature="e#7805#7828#0#HTML" expanded="true" />
+                <element signature="e#8027#8068#0#HTML" expanded="true" />
+                <element signature="e#8088#8109#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +91,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            <state relative-caret-position="190">
+              <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -96,7 +104,7 @@
             <state relative-caret-position="330">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
-                <element signature="e#470#528#0#HTML" expanded="true" />
+                <element signature="e#470#528#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -115,8 +123,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+            <state relative-caret-position="522">
+              <caret line="100" column="10" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -125,9 +133,12 @@
       <file leaf-file-name="instagram.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="1380">
+              <caret line="256" column="50" selection-start-line="256" selection-start-column="50" selection-end-line="256" selection-end-column="50" />
+              <folding>
+                <element signature="e#12110#12151#0#HTML" expanded="true" />
+                <element signature="e#12171#12192#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,14 +161,14 @@
         <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/base-en.html" />
         <option value="$PROJECT_DIR$/inscrawler/static/inscrawler/js/main.js" />
         <option value="$PROJECT_DIR$/inscrawler/urls.py" />
-        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html" />
-        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html" />
         <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/donate.html" />
-        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html" />
-        <option value="$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css" />
-        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html" />
         <option value="$PROJECT_DIR$/inscrawler/page/insCrawler.py" />
         <option value="$PROJECT_DIR$/inscrawler/views.py" />
+        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html" />
+        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html" />
+        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html" />
+        <option value="$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css" />
+        <option value="$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html" />
       </list>
     </option>
   </component>
@@ -198,7 +209,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,6 +279,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -570,7 +581,7 @@
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20330843" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20757738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32085562" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -656,7 +667,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="98" />
-          <folding />
+          <folding>
+            <element signature="e#7194#7219#0#HTML" expanded="true" />
+            <element signature="e#7805#7828#0#HTML" expanded="true" />
+            <element signature="e#8027#8068#0#HTML" expanded="true" />
+            <element signature="e#8088#8109#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -704,7 +720,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1804">
           <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="e#12110#12151#0#HTML" expanded="true" />
+            <element signature="e#12171#12192#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -738,7 +757,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="98" />
-          <folding />
+          <folding>
+            <element signature="e#7194#7219#0#HTML" expanded="true" />
+            <element signature="e#7805#7828#0#HTML" expanded="true" />
+            <element signature="e#8027#8068#0#HTML" expanded="true" />
+            <element signature="e#8088#8109#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -778,7 +802,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1804">
           <caret line="82" column="50" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="e#12110#12151#0#HTML" expanded="true" />
+            <element signature="e#12171#12192#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -818,7 +845,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="98" />
-          <folding />
+          <folding>
+            <element signature="e#7194#7219#0#HTML" expanded="true" />
+            <element signature="e#7805#7828#0#HTML" expanded="true" />
+            <element signature="e#8027#8068#0#HTML" expanded="true" />
+            <element signature="e#8088#8109#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -967,32 +999,8 @@
         <state relative-caret-position="330">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
-            <element signature="e#470#528#0#HTML" expanded="true" />
+            <element signature="e#470#528#0#HTML" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,36 +1012,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-418">
-          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inscrawler/page/insCrawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="506">
           <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="101" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inscrawler/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="1716">
           <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="100" column="10" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/index-en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="87" column="7" selection-start-line="87" selection-start-column="7" selection-end-line="87" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="256" column="50" selection-start-line="256" selection-start-column="50" selection-end-line="256" selection-end-column="50" />
+          <folding>
+            <element signature="e#12110#12151#0#HTML" expanded="true" />
+            <element signature="e#12171#12192#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscrawler/static/inscrawler/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscrawler/templates/inscrawler/instagram-en.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3916">
+          <caret line="178" column="53" selection-start-line="178" selection-start-column="53" selection-end-line="178" selection-end-column="53" />
+          <folding>
+            <element signature="e#7194#7219#0#HTML" expanded="true" />
+            <element signature="e#7805#7828#0#HTML" expanded="true" />
+            <element signature="e#8027#8068#0#HTML" expanded="true" />
+            <element signature="e#8088#8109#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

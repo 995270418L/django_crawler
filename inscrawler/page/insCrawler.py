@@ -77,12 +77,19 @@ class Crawler(object):
         try:
             media = self.fetch_media_json(username, max_id)
         except ValueError:
-            media['error_message'] = 'max_id错误，请重试!'
-            media['error_message_en'] = 'max_id parameter error,please retry it.'
+            media['error_message'] = '服务器错误，请稍后重试!'
+            media['error_message_en'] = 'the server response a error,please retry it later or notify the webadmin'
             return media
         urls = []
         for item in media['items']:
-            urls.append(item[item['type'] + 's']['standard_resolution']['url'].split('?')[0])
+            type = item['type']
+            if type == 'carousel':
+                type = type + '_media'
+                for carousel in item[type]:
+                    urls.append(carousel[carousel['type'] + 's']['standard_resolution']['url'].split('?')[0])
+            else:
+                urls.append(item[type + 's']['standard_resolution']['url'].split('?')[0])
+
         url = [self.set_media_url(url) for url in urls]
         message= {}
         message['urls'] = url
@@ -103,13 +110,7 @@ class Crawler(object):
 
         if resp.status_code == 200:
             media = json.loads(resp.text)
-
-            if not media['items']:
-                raise ValueError('User {0} is private'.format(username))
-
             return media
-        else:
-            raise ValueError('User {0} does not exist'.format(username))
 
         #起过滤图片的作用
     def set_media_url(self, item):
